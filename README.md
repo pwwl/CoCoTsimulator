@@ -1,7 +1,7 @@
 # CoCoT: Collaborative Contact Tracing Simulation Tool
 
 
-This tool was used to help test the algorithms in our published paper "CoCoT: Collaborative Contact Tracing" ([codaspy version]() <-please cite this version, [KiltHub version]()). 
+This tool was used to help test the algorithms in our published paper "CoCoT: Collaborative Contact Tracing" ([codaspy version]() <-please cite this version with included [bibtex](citation.bibtex), [KiltHub version]()). 
 `CoCoTsimulator` (CoCoT) is a java tool that simulates wireless contact tracing protocols between phones to experiment with improving their accuracy, 
 even in the face of adversaries.
 The simulator places people (agents) in a 2d environment, simulates BLE-based distance estimates between them, and then evaluates how different algorithms improve distance-estimate accuracy.
