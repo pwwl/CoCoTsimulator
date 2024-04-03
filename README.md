@@ -1,10 +1,10 @@
 # CoCoT: Collaborative Contact Tracing Simulation Tool
 
 
-This tool was used to help test the algorithms in our published paper "CoCoT: Collaborative Contact Tracing" ([codaspy version]() <-please cite this version with included [bibtex](citation.bibtex), [KiltHub version]()). 
+This tool was used to help test the algorithms in our published paper "CoCoT: Collaborative Contact Tracing" ([CODASPY version]() <-please cite this version with included [bibtex](citation.bibtex), [Technical Report version]()). 
 `CoCoTsimulator` (CoCoT) is a java tool that simulates wireless contact tracing protocols between phones to experiment with improving their accuracy, 
 even in the face of adversaries.
-The simulator places people (agents) in a 2d environment, simulates BLE-based distance estimates between them, and then evaluates how different algorithms improve distance-estimate accuracy.
+The simulator places people (agents) in a 2d environment, simulates Bluetooth LowEnergy(BLE)-based distance estimates between them, and then evaluates how different algorithms improve distance-estimate accuracy.
 People can be placed in realistic, repeatable ways using AgentFiles, which tell CoCoT where people would be positioned in the 2D area over time.
 
 ## Quickstart guide
@@ -56,6 +56,11 @@ This is with the one exception that we ran our algorithm with several seeds and 
 >
 > ...
 
+and similarly for the synthetic scenario experiments: 
+> `gradle run --args="setting=agent_simulation_files/cafeteria.txt fullOutput=salsaOutput.csv writeOutputHeader=true rngSeed=1"`
+>
+> ...
+
 CoCoT will concatenate all the outputs. 
 Then you can run whatever statistical tool you like; I find Python+Pandas works quite well with our output.
 
@@ -100,7 +105,7 @@ Not including this argument will default to randomly placing agents in a box usi
 
 ### Algorithm values
 
-Input values for SpringMass algorithm, see paper for details. 
+These are the values that the SpringMass algorithm uses for its spring stiffness heuristics. See the paper for more details about how spring stiffness values are calculated. 
 
 `alpha` - Default=`2.66`
 
@@ -188,12 +193,12 @@ Options={`RSSI`,`Rand`,`ML`,`DATASET`}, Default=`ML`.
 
 ## Extending the tool
 
-All the code is available in the `src/` folder, feel free to extend it.
+All the code is available in the `src/` folder; feel free to extend it.
 Much of the code that was tested for debugging or potential other features still exists in skeleton form. 
 Hopefully it makes it easier to understand. 
 
 ---
-All work in this repo is licensed under the Apache 2.0 license.
+All work in this repo is licensed under the [Apache 2.0 license](LICENSE).
 
 This is research grade code and is not guaranteed to be bug free.
 This repo is not actively maintained, issues and PRs *might* be addressed. 
