@@ -1,0 +1,60 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: CoCoT Simulator
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Trevor
+    family-names: Kann
+    email: tkann@cmu.edu
+    affiliation: Carnegie Mellon University
+    orcid: 'https://orcid.org/0009-0004-5197-2448'
+  - orcid: 'https://orcid.org/0000-0002-8209-6792'
+    given-names: Lujo
+    family-names: Bauer
+    email: lbauer@cmu.edu
+    affiliation: Carnegie Mellon University
+  - given-names: Robert K.
+    family-names: Cunningham
+    email: robertkcunningham@pitt.edu
+    affiliation: University of Pittsburgh
+    orcid: 'https://orcid.org/0000-0002-5837-6161'
+identifiers:
+  - type: doi
+    value: 10.1145/3626232.3653254
+abstract: >-
+  Contact tracing can limit the spread of infectious
+  diseases by notifying people of potential exposure to
+  disease. Manual contact tracing is resource-intensive, but
+  much of it can be automated using mobile phones, which are
+  ubiquitous and can detect and record nearby contacts. Two
+  major problems arise with automated contact tracing (ACT):
+  preventing abuse for mass surveillance and accurately
+  determining contacts. For example, the most widely adopted
+  solution—Google and Apple’s Exposure Notification
+  (GAEN)—protects user privacy but suffers from inaccurate
+  distance measurements that result in poor risk
+  assessments. We propose to use collaboration among nearby
+  devices to increase distance estimation accuracy, and
+  therefore risk assessment accuracy, while minimizing the
+  loss of user privacy. Our protocol, CoCoT, extends GAEN, a
+  proximity-based, distributed ACT protocol, by adding an
+  additional broadcast
+
+  to share locally-derived distance estimates. To evaluate
+  CoCoT, we develop a method for merging phone sensor
+  datasets with human interaction datasets to approximate
+  realistic scenarios and test our protocol. CoCoT improves
+  distance estimate accuracy by 28% over the current best
+  distance estimators and we analytically show impact on
+  privacy, security, and battery consumption are minimal.
+keywords:
+  - Automatic Contact Tracing
+  - Distributed Optimization
+  - Network Localization
+  - Smartphone Privacy
+license: CC-BY-4.0
