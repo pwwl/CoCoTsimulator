@@ -1,14 +1,16 @@
 # CoCoT: Collaborative Contact Tracing Simulation Tool
 
 
-This tool was used to help test the algorithms in our published paper "CoCoT: Collaborative Contact Tracing" ([codaspy version](), [KiltHub version]()). 
-It's a java tool that simulates wireless contact tracing protocols between phones to experiment with improving their accuracy, 
+This tool was used to help test the algorithms in our published paper "CoCoT: Collaborative Contact Tracing" ([codaspy version]() <-please cite this version, [KiltHub version]()). 
+`CoCoTsimulator` (CoCoT) is a java tool that simulates wireless contact tracing protocols between phones to experiment with improving their accuracy, 
 even in the face of adversaries.
+The simulator places people (agents) in a 2d environment, simulates BLE-based distance estimates between them, and then evaluates how different algorithms improve distance-estimate accuracy.
+People can be placed in realistic, repeatable ways using AgentFiles, which tell CoCoT where people would be positioned in the 2D area over time.
 
 ## Quickstart guide
 
-* I run CoCOT using JDK 19 or later, but it seems to work on as little as openJDK 17.
-* I build with Gradle 8.3.
+* I run CoCoT using JDK 19 or later, but CoCoT seems to work on as little as openJDK 17.
+* I build CoCoT with Gradle 8.3.
 * Code has been tested on Ubuntu 22.04 and MacOS 14.2. 
 
 CoCoT can use agent simulation files to manually position people for repeatable, realistic results.
@@ -20,29 +22,50 @@ I provide a [gradle](https://gradle.org/) file for automating running and compil
 
 >```gradle run (--args="...")```
 
-for example
+for example:
 
 > `gradle run --args="setting=agent_simulation_files/SALSAscene.txt fullOutput=salsaOutput.csv"`
 
-This is the easy, automatic way of running it (SALSA takes about 20 seconds to run with no output). 
-If you want a portable jar file, you can use 
+This is the easy, automatic way of running CoCoT.
+When you run this command, you won't see any command line output, but you should see files being generated. 
+In this case, the SALSA dataset takes about 20 seconds to run on my machine; the smaller, synthetic datasets like cafeteria should only take a second or two. 
+After that, you'll get a few output files: a large output, the same one as in the sample datasets directory, as well as an abbreviated, summary result. 
+
+If you want a portable jar file, you can use:
 
 >```gradle assemble```
 
 Which will build and package the jar with dependencies into the `build/distributions/` folder as a tar or zip file. 
-Later you can untar/unzip it and run the executable with compiled gradle script.
+Later you can untar/unzip it and run the executable with compiled gradle script. 
+Note you need to link the compiled jar files. Gradle does this automatically in the run script but see below to avoid gradle. 
 
 If you don't care about compiling it *and* don't want to install gradle, a precompiled version is packaged in this repo.
-You can run it by doing
+You can run it by doing:
 
->```java -classpath precompiled/cocot.jar:precompiled/commons-math3-3.3.jar Main (<args>)```
+>```java -classpath precompiled/CoCoT.jar:precompiled/commons-math3-3.3.jar Main (<args>)```
 
+#### Paper Experiments
+The results from our experiments can be achieved running CoCoT on SALSA as well as the 6 synthetic experiments. 
+The default parameters for CoCoT are the correct arguments to run the SpringMass algorithm.
+This is with the one exception that we ran our algorithm with several seeds and averaged the results, for example you could run:
+> `gradle run --args="setting=agent_simulation_files/SALSAscene.txt fullOutput=salsaOutput.csv writeOutputHeader=true rngSeed=1"`
+> 
+> `gradle run --args="setting=agent_simulation_files/SALSAscene.txt fullOutput=salsaOutput.csv writeOutputHeader=false rngSeed=2"`
+> 
+> `gradle run --args="setting=agent_simulation_files/SALSAscene.txt fullOutput=salsaOutput.csv writeOutputHeader=false rngSeed=3"`
+>
+> ...
+
+CoCoT will concatenate all the outputs. 
+Then you can run whatever statistical tool you like; I find Python+Pandas works quite well with our output.
 
 ### Agent files
 
 Agent files are used to place agents in a specific location for repeatable results.
 This repo comes packaged with a few useful ones in the `agent_simulation_files/` folder as well as how we generated our 
-custom ones in the `python_agent_file_generator/` folder
+custom ones in the `python_agent_file_generator/` folder.
+
+More details can be found in the [`agent_simulation_files/README.md`](agent_simulation_files/).
 
 ## Project structure
 
@@ -55,7 +78,7 @@ custom ones in the `python_agent_file_generator/` folder
 - `gradle` - Gradle files (you can ignore this directory)
 
 
-## CLI flags
+## Program Arguments
 
 When I wrote this I was stubborn and didn't use a real argument parser, as such arguments are passed as `key=value` pairs.
 No spaces between the key, `=`, and value are allowed.
@@ -111,16 +134,21 @@ Default=`1`
 
 ### Which algorithms to run
 
-See paper for details on algorithms. All values are boolean, defaulting to `false` except for `weightedSprings`.
+You can run multiple algorithms in the same simulation to directly compare the results of different algorithms. 
+See paper for details on specific algorithms. 
+All values are boolean, defaulting to `false` except for `weightedSprings`.
 
-Example: `averageOut=true` will run the averageOut algorithm.
+Example: `averageOut=true stressMajorization=true` will run both the averageOut algorithm and the graphDrawing algorithm.
 
-Options={`averageOut`,
-`stressMajorization`(deprecated),
-`cliqueMDS`(deprecated),
-`weightedSprings`(aka springMass),
-`stressMajDropNeighbor`(deprecated),
-`stressMajDropLink`(deprecated)}
+Options={
+* `averageOut` - averages out distances estimates between neighbors,
+* `stressMajorization` - aka graphDrawing; produces an internal topology of nearby neighbors to optimize over,
+* `weightedSprings` - aka springMass; like graph drawing but uses heuristics to determine which estimates are better than others,
+* `cliqueMDS` - (deprecated) like graph drawing but emphasizes distance estimates between cliques, ignores neighbors who don't see each other,
+* `stressMajDropNeighbor` - (deprecated) like graph drawing but estimates which neighbor was the least beneficial from the estimates and ignores them,
+* `stressMajDropLink` - (deprecated) like `stressMajDropNeighbor` but estiamtes which links were the least beneficial,
+
+}
 
 Note that names don't match up from the paper, the options, and the outputCSV. Sorry. 
 
