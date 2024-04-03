@@ -7,9 +7,11 @@ even in the face of adversaries.
 
 ## Quickstart guide
 
-CoCoT runs using jdk 19 or later. 
+I run CoCOT using JDK 19 or later, but it seems to work on as little as openJDK 17. 
+Code has been tested on Ubuntu 22.04 and MacOS 14.2. 
+
 CoCoT can also use agent simulation files to manually position people for repeatable, realistic results.
-See the `AgentSimulationFiles/formatGuide.txt` for details. 
+See the `agent_simulation_files/formatGuide.txt` for details. 
 
 
 ### Compiling and running
@@ -19,9 +21,9 @@ I provide a [gradle](https://gradle.org/) file for automating running and compil
 
 for example
 
-> `gradle run --args="setting=AgentSimulationFiles/SALSAscene.txt fullOutput=salsaOutput.csv`
+> `gradle run --args="setting=agent_simulation_files/SALSAscene.txt fullOutput=salsaOutput.csv"`
 
-This is the easy, automatic way of running it. 
+This is the easy, automatic way of running it (SALSA takes about 20 seconds to run with no output). 
 If you want a portable jar file, you can use 
 
 >```gradle assemble```
@@ -38,8 +40,8 @@ You can run it by doing
 ### Agent files
 
 Agent files are used to place agents in a specific location for repeatable results.
-This repo comes packaged with a few useful ones in the `AgentSimulationFiles/` folder as well as how we generated our 
-custom ones in the `customAgentFileGeneratorPython/` folder
+This repo comes packaged with a few useful ones in the `agent_simulation_files/` folder as well as how we generated our 
+custom ones in the `python_agent_file_generator/` folder
 
 ## Project structure
 
