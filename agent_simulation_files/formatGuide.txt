@@ -1,0 +1,23 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% headers of a section are always "header-type <var>:" and entries are always "<value> var-name".	    %
+% <type var> representes what value should be present there instead of the template.			        %
+% do not add variable dimensions after the values. 							                            %
+% by default all values are in feet and decimals are accepted.						                    %
+% all values are separated by a space.								                                    %
+%                                   								                                    %
+% Percent signs are not actually comments, there are no comments in this format, 				        %
+% I just use them in this example                               					                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<int numberOfMinutesTotal> minutes
+<int maxX> <int maxY> area %minx and miny are both always 0
+
+initialize: %this must be first, all agents must be present each round
+
+agent <int ID>: 
+<int agentsRange in feet> range % if using the MITRE dataset, this should be 16
+<position agentPhonePosition> position
+%Phone position was intended but since deprecated, it's still required for the format though
+
+%rounds must start at 0, all rounds up to max round must be present
+round <int roundNumber>: 
+<int agentID> <decimal xLocation> <decimal yLocation>

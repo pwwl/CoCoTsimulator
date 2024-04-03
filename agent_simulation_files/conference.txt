@@ -1,0 +1,136 @@
+1 minutes
+24.0 2.5 area
+
+initialize:
+
+agent 0:
+16 range
+INHAND phone
+
+agent 1:
+16 range
+INHAND phone
+
+agent 2:
+16 range
+INHAND phone
+
+agent 3:
+16 range
+INHAND phone
+
+agent 4:
+16 range
+INHAND phone
+
+agent 5:
+16 range
+INHAND phone
+
+agent 6:
+16 range
+INHAND phone
+
+agent 7:
+16 range
+INHAND phone
+
+agent 8:
+16 range
+INHAND phone
+
+agent 9:
+16 range
+INHAND phone
+
+agent 10:
+16 range
+INHAND phone
+
+agent 11:
+16 range
+INHAND phone
+
+agent 12:
+16 range
+INHAND phone
+
+agent 13:
+16 range
+INHAND phone
+
+agent 14:
+16 range
+INHAND phone
+
+agent 15:
+16 range
+INHAND phone
+
+agent 16:
+16 range
+INHAND phone
+
+agent 17:
+16 range
+INHAND phone
+
+agent 18:
+16 range
+INHAND phone
+
+agent 19:
+16 range
+INHAND phone
+
+agent 20:
+16 range
+INHAND phone
+
+agent 21:
+16 range
+INHAND phone
+
+agent 22:
+16 range
+INHAND phone
+
+agent 23:
+16 range
+INHAND phone
+
+agent 24:
+16 range
+INHAND phone
+
+agent 25:
+16 range
+INHAND phone
+
+round 0:
+0 1.500 0.000
+1 3.000 0.000
+2 4.500 0.000
+3 0.000 1.250
+4 1.500 2.500
+5 3.000 2.500
+6 4.500 2.500
+7 7.500 0.000
+8 9.000 0.000
+9 10.500 0.000
+10 7.500 2.500
+11 9.000 2.500
+12 10.500 2.500
+13 13.500 0.000
+14 15.000 0.000
+15 16.500 0.000
+16 13.500 2.500
+17 15.000 2.500
+18 16.500 2.500
+19 19.500 0.000
+20 21.000 0.000
+21 22.500 0.000
+22 19.500 2.500
+23 21.000 2.500
+24 22.500 2.500
+25 24.000 1.250

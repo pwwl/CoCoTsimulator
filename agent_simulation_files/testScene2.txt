@@ -1,0 +1,31 @@
+15 minutes
+1000 1000 area
+
+initialize:
+
+agent 0: 
+10 range
+FRONTPANTSPOCKET phone
+
+agent 1:
+20 range
+INHAND phone
+
+agent 2:
+20 range
+INHAND phone
+
+agent 3:
+20 range
+INHAND phone
+
+agent 4:
+20 range
+INHAND phone
+
+round 0:
+0 10 10
+1 15 10
+2 10 15
+3 15 15
+4 12.5 12.5

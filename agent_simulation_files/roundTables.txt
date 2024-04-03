@@ -1,0 +1,246 @@
+1 minutes
+23.0 14.0 area
+
+initialize:
+
+agent 0:
+16 range
+INHAND phone
+
+agent 1:
+16 range
+INHAND phone
+
+agent 2:
+16 range
+INHAND phone
+
+agent 3:
+16 range
+INHAND phone
+
+agent 4:
+16 range
+INHAND phone
+
+agent 5:
+16 range
+INHAND phone
+
+agent 6:
+16 range
+INHAND phone
+
+agent 7:
+16 range
+INHAND phone
+
+agent 8:
+16 range
+INHAND phone
+
+agent 9:
+16 range
+INHAND phone
+
+agent 10:
+16 range
+INHAND phone
+
+agent 11:
+16 range
+INHAND phone
+
+agent 12:
+16 range
+INHAND phone
+
+agent 13:
+16 range
+INHAND phone
+
+agent 14:
+16 range
+INHAND phone
+
+agent 15:
+16 range
+INHAND phone
+
+agent 16:
+16 range
+INHAND phone
+
+agent 17:
+16 range
+INHAND phone
+
+agent 18:
+16 range
+INHAND phone
+
+agent 19:
+16 range
+INHAND phone
+
+agent 20:
+16 range
+INHAND phone
+
+agent 21:
+16 range
+INHAND phone
+
+agent 22:
+16 range
+INHAND phone
+
+agent 23:
+16 range
+INHAND phone
+
+agent 24:
+16 range
+INHAND phone
+
+agent 25:
+16 range
+INHAND phone
+
+agent 26:
+16 range
+INHAND phone
+
+agent 27:
+16 range
+INHAND phone
+
+agent 28:
+16 range
+INHAND phone
+
+agent 29:
+16 range
+INHAND phone
+
+agent 30:
+16 range
+INHAND phone
+
+agent 31:
+16 range
+INHAND phone
+
+agent 32:
+16 range
+INHAND phone
+
+agent 33:
+16 range
+INHAND phone
+
+agent 34:
+16 range
+INHAND phone
+
+agent 35:
+16 range
+INHAND phone
+
+agent 36:
+16 range
+INHAND phone
+
+agent 37:
+16 range
+INHAND phone
+
+agent 38:
+16 range
+INHAND phone
+
+agent 39:
+16 range
+INHAND phone
+
+agent 40:
+16 range
+INHAND phone
+
+agent 41:
+16 range
+INHAND phone
+
+agent 42:
+16 range
+INHAND phone
+
+agent 43:
+16 range
+INHAND phone
+
+agent 44:
+16 range
+INHAND phone
+
+agent 45:
+16 range
+INHAND phone
+
+agent 46:
+16 range
+INHAND phone
+
+agent 47:
+16 range
+INHAND phone
+
+round 0:
+0 5.000 2.500
+1 4.268 4.268
+2 2.500 5.000
+3 0.732 4.268
+4 0.000 2.500
+5 0.732 0.732
+6 2.500 0.000
+7 4.268 0.732
+8 5.000 11.500
+9 4.268 13.268
+10 2.500 14.000
+11 0.732 13.268
+12 0.000 11.500
+13 0.732 9.732
+14 2.500 9.000
+15 4.268 9.732
+16 14.000 2.500
+17 13.268 4.268
+18 11.500 5.000
+19 9.732 4.268
+20 9.000 2.500
+21 9.732 0.732
+22 11.500 0.000
+23 13.268 0.732
+24 14.000 11.500
+25 13.268 13.268
+26 11.500 14.000
+27 9.732 13.268
+28 9.000 11.500
+29 9.732 9.732
+30 11.500 9.000
+31 13.268 9.732
+32 23.000 2.500
+33 22.268 4.268
+34 20.500 5.000
+35 18.732 4.268
+36 18.000 2.500
+37 18.732 0.732
+38 20.500 0.000
+39 22.268 0.732
+40 23.000 11.500
+41 22.268 13.268
+42 20.500 14.000
+43 18.732 13.268
+44 18.000 11.500
+45 18.732 9.732
+46 20.500 9.000
+47 22.268 9.732
