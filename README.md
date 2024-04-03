@@ -141,7 +141,8 @@ Default=`true`.
 
 
 `visualsON` - Mostly deprecated. 
-Provides a janky (😄) visual renderer for the location of agents as well as the relative performances of algorithms in nDCF-like accuracy. 
+Provides a janky (😄) visual renderer for the location of agents as well as the relative performances of algorithms in nDCF-like accuracy.
+Useful for debugging agent files. 
 Default=`false`.
 
 `rngSeed` - seed for the random number generator. Default=`1337`.
