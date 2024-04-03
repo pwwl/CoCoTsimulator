@@ -7,7 +7,7 @@ even in the face of adversaries.
 The simulator places people (agents) in a 2d environment, simulates Bluetooth LowEnergy(BLE)-based distance estimates between them, and then evaluates how different algorithms improve distance-estimate accuracy.
 People can be placed in realistic, repeatable ways using AgentFiles, which tell CoCoT where people would be positioned in the 2D area over time.
 
-## Quickstart guide
+## Quick-start guide
 
 * I run CoCoT using JDK 19 or later, but CoCoT seems to work on as little as openJDK 17.
 * I build CoCoT with Gradle 8.3.
@@ -97,11 +97,11 @@ Bellow is a full list of the available arguments:
 Not including this argument will default to randomly placing agents in a box using the 
 `bounds`, `numberOfRounds`, and `population` arguments. Default=` ` (no setting)
 
-`bounds` - Bounds in feet for the agents to be placed in. Superceded by `setting`. Default=`500`.
+`bounds` - Bounds in feet for the agents to be placed in. Superseded by `setting`. Default=`500`.
 
-`numberOfRounds` - Number of rounds to simulate agents moving. Superceded by `setting`. Default=`20`.
+`numberOfRounds` - Number of rounds to simulate agents moving. Superseded by `setting`. Default=`20`.
 
-`population` - Number of agents to simulate. Superceded by `setting`. Default=`1000`.
+`population` - Number of agents to simulate. Superseded by `setting`. Default=`1000`.
 
 ### Algorithm values
 
@@ -148,10 +148,10 @@ Example: `averageOut=true stressMajorization=true` will run both the averageOut 
 Options={
 * `averageOut` - averages out distances estimates between neighbors,
 * `stressMajorization` - aka graphDrawing; produces an internal topology of nearby neighbors to optimize over,
-* `weightedSprings` - aka springMass; like graph drawing but uses heuristics to determine which estimates are better than others,
+* `weightedSprings` - aka SpringMass; like graph drawing but uses heuristics to determine which estimates are better than others,
 * `cliqueMDS` - (deprecated) like graph drawing but emphasizes distance estimates between cliques, ignores neighbors who don't see each other,
 * `stressMajDropNeighbor` - (deprecated) like graph drawing but estimates which neighbor was the least beneficial from the estimates and ignores them,
-* `stressMajDropLink` - (deprecated) like `stressMajDropNeighbor` but estiamtes which links were the least beneficial,
+* `stressMajDropLink` - (deprecated) like `stressMajDropNeighbor` but estimates which links were the least beneficial,
 
 }
 
@@ -168,7 +168,7 @@ Note that names don't match up from the paper, the options, and the outputCSV. S
 `dataLocation` - Where the CDFs for distribution-to-distance-estimates are held. Default=`CDFs/`.
 
 
-### Miscelaneous
+### Miscellaneous
 
 `symmetric` - Determines whether or not agents can talk to other agents that see them, but not vice versa.
 E.g. if $p_1$ has a range of 20 and $p_2$ is 12 feet away with a range of 10, $p_1$ can see $p_2$ but $p_2$ can't see $p_1$.
