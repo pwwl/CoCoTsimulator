@@ -7,10 +7,11 @@ even in the face of adversaries.
 
 ## Quickstart guide
 
-I run CoCOT using JDK 19 or later, but it seems to work on as little as openJDK 17. 
-Code has been tested on Ubuntu 22.04 and MacOS 14.2. 
+* I run CoCOT using JDK 19 or later, but it seems to work on as little as openJDK 17.
+* I build with Gradle 8.3.
+* Code has been tested on Ubuntu 22.04 and MacOS 14.2. 
 
-CoCoT can also use agent simulation files to manually position people for repeatable, realistic results.
+CoCoT can use agent simulation files to manually position people for repeatable, realistic results.
 See the `agent_simulation_files/formatGuide.txt` for details. 
 
 
