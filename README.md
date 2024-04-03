@@ -18,7 +18,7 @@ See the `agent_simulation_files/formatGuide.txt` for details.
 ### Compiling and running
 I provide a [gradle](https://gradle.org/) file for automating running and compiling. If you want to just run the file, you can use 
 
->```gradle run <--args="...">```
+>```gradle run (--args="...")```
 
 for example
 
@@ -35,7 +35,7 @@ Later you can untar/unzip it and run the executable with compiled gradle script.
 If you don't care about compiling it *and* don't want to install gradle, a precompiled version is packaged in this repo.
 You can run it by doing
 
->```java -classpath precompiled/cocot.jar:precompiled/commons-math3-3.3.jar Main <args>```
+>```java -classpath precompiled/cocot.jar:precompiled/commons-math3-3.3.jar Main (<args>)```
 
 
 ### Agent files
